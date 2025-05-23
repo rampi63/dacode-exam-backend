@@ -3,5 +3,7 @@
 # ------------------------------------------------------
 
 type Query {
-  ping: String!
+  pingAuth: String!
+  pingUsers: String!
+  pingTask: String!
 }
