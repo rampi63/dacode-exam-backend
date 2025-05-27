@@ -5,18 +5,15 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 
-// Controlador y servicio base
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-// Módulos propios de la app
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
-    // Cargar variables de entorno de .env
     ConfigModule.forRoot({
       isGlobal: true,
     }),
